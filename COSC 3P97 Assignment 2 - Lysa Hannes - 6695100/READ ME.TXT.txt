@@ -1,0 +1,15 @@
+Lysa Hannes 6695100
+
+I added links to all the resources when I used one right above where I used it
+
+I know it said to delete the .gradle and build forders but I had to add things in the build.gradle file for the room api 
+so I delete the .gradle and build forders just incase
+
+Please note that this only works in the month of April
+I could have used a date picker field but I thought making my own would be so much nicer
+but I left the making the calendar dynamic for the last thing to do
+and I really couldn't think of how to do that with everything that I have already done
+hopefully, I won't get marks off for that since it would have been easier to use a date picker field then what I did
+
+Side note, I called my project assignment 2 again because I had to redo the files a couple of times when adding the room api 
+and changing computers, it didn't run on different versions of android studio for some reason

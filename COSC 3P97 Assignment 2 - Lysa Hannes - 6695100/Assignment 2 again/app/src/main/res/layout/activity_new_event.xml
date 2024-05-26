@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NewEvent">
+
+    <!-- thi helped me solve this: https://stackoverflow.com/questions/1555109/how-to-stop-edittext-from-gaining-focus-when-an-activity-starts-in-android -->
+    <!-- Dummy item to prevent edit text from receiving focus -->
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Event Name"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:background="#8ac2c2"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/name"
+            android:background="#e6eded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:ems="10"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Date"
+            android:textAlignment="center"
+            android:background="#8ac2c2"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" JAN 01 2024"
+            style="?android:spinnerStyle"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:background="#e6eded"
+            android:id="@+id/datePickerField"
+            android:textAlignment="center"
+            android:onClick="openDatePicker"/>
+        <!--I used this video to help me with the datePicker: https://www.youtube.com/watch?v=qCoidM98zNk -->
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        android:layout_margin="20dp">
+
+        <!--I used this video to help me with the time Picker: https://www.youtube.com/watch?v=c6c1giRekB4 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Time"
+            android:textAlignment="center"
+            android:background="#8ac2c2"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textAlignment="center"
+            style="?android:spinnerStyle"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:background="#e6eded"
+            android:id="@+id/timePickerField"
+            android:onClick="openTimePicker"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="0dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select a Contact"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:background="#8ac2c2"
+            android:textSize="20sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:id="@+id/contactToAdd"/>
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="0dp"
+        android:id="@+id/contactslist"
+        android:layout_margin="10dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Create Event"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:background="#8ac2c2"
+        android:textSize="20sp"
+        android:onClick="CreateEvent"
+        android:id="@+id/createEvent"/>
+
+</LinearLayout>

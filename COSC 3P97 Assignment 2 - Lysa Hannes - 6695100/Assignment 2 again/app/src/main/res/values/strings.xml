@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Assignment 2</string>
+    <string name="addNew">+ New Event</string>
+    <string name="contacts">View Contacts</string>
+    <string name="clear_all_events">Clear All Events</string>
+    <string name="previous"><![CDATA[<-]]></string>
+    <string name="next"><![CDATA[->]]></string>
+    <string name="save">Save</string>
+</resources>
