@@ -1,7 +1,9 @@
 Schedule App Using Android Studio
 
-Only works for the Month of June at the moment since I wanted to make my own calander instead of using the default one. 
-Has Many Funtionalities including:
+I used the Iguana version of android to create this app. 
+It only works for the Month of June at the moment since I wanted to make my own calander instead of using the default one. 
+
+Has many funtionalities including:
  - Adding Event
    -   Event Name
    -   Date
